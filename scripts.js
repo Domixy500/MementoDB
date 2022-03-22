@@ -1,7 +1,7 @@
 function RunScript(scriptName) {
-  eval("Script_Test();");
+  eval("Script_" + scriptName + "();");
 }
 
-function Script_Test() {
+function Script_InitializeDB() {
   message("Test");
 }
