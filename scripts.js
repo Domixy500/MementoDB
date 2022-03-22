@@ -3,5 +3,5 @@ function RunScript(scriptName) {
 }
 
 function Script_InitializeDB() {
-  message("Test");
+  message("Init");
 }
