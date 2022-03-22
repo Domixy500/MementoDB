@@ -1,3 +1,10 @@
+function Create(typeName) {
+  var lib = libByName(typeName);
+  var obj = new Object();
+  obj = lib.create(obj);
+  return obj;
+}
+
 function Reference(e) {
 	this.DisplayName = e.field("DisplayName");
 	this.Type = new ObjectType(e.field("Type"));
