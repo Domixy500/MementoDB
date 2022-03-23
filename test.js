@@ -14,11 +14,20 @@ function Reference(e) {
 	}
 }
 
-function ObjectType(e) {
-	this.id = e.id;
-	this.Name = e.field("Name");
+function BaseObject(e = null) {
+  if(e == null) {
+    this = Create("BaseObject");
+  }
+}
+
+function ObjectType(e = null) {
+  if(e == null) {
+    BaseObject.call(this, null);
+  }
+	//this.id = e.id;
+	//this.Name = e.field("Name");
 	
-	this.Show = function() {
-		message("id:\n" + this.id + "\nName:" + this.Name);
-	}
+	//this.Show = function() {
+	//	message("id:\n" + this.id + "\nName:" + this.Name);
+	//}
 }
