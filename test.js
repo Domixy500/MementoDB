@@ -17,12 +17,11 @@ function Reference(e) {
 function BaseObject(e) {
   if(e === undefined) {
     this.entry = Create("BaseObject");
-message("undefined");
   }
 }
 BaseObject.prototype.Id = function() {
   var result = this.entry.field("Id");
-message(result);
+message("res" + result);
   return result;
   //return "test";
 }
