@@ -15,8 +15,7 @@ function Reference(e) {
 }
 
 function BaseObject(e) {
-  message(e);
-  if(e == null) {
+  if(e === undefined) {
     this.entry = Create("BaseObject");
   }
 }
