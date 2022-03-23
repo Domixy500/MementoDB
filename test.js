@@ -14,14 +14,14 @@ function Reference(e) {
 	}
 }
 
-function BaseObject(e = null) {
+function BaseObject(e) {
   if(e == null) {
     this.entry = Create("BaseObject");
   }
 }
 BaseObject.prototype.Id = function() {
-  //return this.entry.field("Id");
-  return "test";
+  return this.entry.field("Id");
+  //return "test";
 }
 
 function ObjectType(e = null) {
