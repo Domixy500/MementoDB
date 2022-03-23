@@ -20,7 +20,9 @@ function BaseObject(e) {
   }
 }
 BaseObject.prototype.Id = function() {
-  return this.entry.field("Id");
+  var result = this.entry.field("Id");
+message(result);
+  return result;
   //return "test";
 }
 
