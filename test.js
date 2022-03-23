@@ -24,7 +24,7 @@ BaseObject.prototype.Id = function() {
   //return "test";
 }
 
-function ObjectType(e = null) {
+function ObjectType(e) {
   if(e == null) {
     BaseObject.call(this, null);
   }
