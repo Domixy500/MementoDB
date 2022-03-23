@@ -19,6 +19,9 @@ function BaseObject(e = null) {
     this.entry = Create("BaseObject");
   }
 }
+BaseObject.prototype.Id = function() {
+  return this.entry.Id;
+}
 
 function ObjectType(e = null) {
   if(e == null) {
