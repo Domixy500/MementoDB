@@ -8,6 +8,6 @@ function Script_InitializeDB() {
   var obj = new BaseObject();
   var Id = obj.entry.field("Id");
   //message(Id);
-  message(obj.Id);
+  message(JSON.stringify(obj.Id));
   message(obj);
 }
