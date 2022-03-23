@@ -16,7 +16,7 @@ function Reference(e) {
 
 function BaseObject(e = null) {
   if(e == null) {
-    this = Create("BaseObject");
+    this.entry = Create("BaseObject");
   }
 }
 
