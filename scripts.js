@@ -5,7 +5,7 @@ function RunScript(scriptName) {
 function Script_InitializeDB() {
   message("Init");
 // BaseObjectType
-  var obj = Create("BaseObject");
-  var Id = obj.field("Id");
+  var obj = new BaseObject();
+  var Id = obj.entry.field("Id");
   message(Id);
 }
