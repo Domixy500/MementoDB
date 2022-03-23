@@ -1,7 +1,7 @@
 function Create(typeName) {
-  var lib = libByName(typeName);
+  var library = libByName(typeName);
   var obj = new Object();
-  obj = lib.create(obj);
+  obj = library.create(obj);
   return obj;
 }
 
@@ -18,13 +18,17 @@ function BaseObject(e) {
   if(e === undefined) {
     this.entry = Create("BaseObject");
   }
+
+  this.Id = function() {
+    return this.entry.field("Id");
+  }
 }
-BaseObject.prototype.Id = function() {
-  var result = this.entry.field("Id");
-message("res" + result);
-  return result;
+//BaseObject.prototype.Id = function() {
+ // var result = this.entry.field("Id");
+//message("res" + result);
+ // return result;
   //return "test";
-}
+//}
 
 function ObjectType(e) {
   if(e == null) {
