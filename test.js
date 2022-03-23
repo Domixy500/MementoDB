@@ -17,6 +17,7 @@ function Reference(e) {
 function BaseObject(e) {
   if(e === undefined) {
     this.entry = Create("BaseObject");
+message("undefined");
   }
 }
 BaseObject.prototype.Id = function() {
