@@ -7,11 +7,19 @@ function Create(typeName) {
 
 function objToString(object) {
   var str = '';
+  switch (typeof object) {
+    case "object":
+      break;
+    case "function":
+      break;
+    default:
+      
+  }
   for (var k in object) {
     if (typeof object[k] == "object") {
       str += k + '::' + objToString(object[k]) + '\n';
     }
-    elseif (typeof object[k] == "function") {}
+    else if (typeof object[k] == "function") {}
     else {
       str += k + '::' + object[k] + '\n';
     }
