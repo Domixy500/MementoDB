@@ -9,8 +9,8 @@ function objToString(obj) {
   var str = '';
   switch (typeof obj) {
     case "object":
-      for (var k in obj) {
-        objToString(obj);
+      for (var prop in obj) {
+        objToString(prop);
       }
       break;
     case "function":
