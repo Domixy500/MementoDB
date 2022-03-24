@@ -5,15 +5,18 @@ function Create(typeName) {
   return obj;
 }
 
-function objToString(object) {
+function objToString(obj) {
   var str = '';
-  switch (typeof object) {
+  switch (typeof obj) {
     case "object":
+      for (var k in obj) {
+        objToString(obj);
+      }
       break;
     case "function":
       break;
     default:
-			str += getName(object);
+		  str += getName(obj);
     	break;
   }
 	log(str);
