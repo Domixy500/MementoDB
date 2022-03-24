@@ -8,24 +8,16 @@ function Create(typeName) {
 function objToString(object) {
   var str = '';
   for (var k in object) {
-    if (object.hasOwnProperty(k)) {
+    if (typeof object[k] == "object") {
       str += k + '::' + objToString(object[k]) + '\n';
     }
+    elseif (typeof object[k] == "function") {}
     else {
       str += k + '::' + object[k] + '\n';
     }
   }
   log(str);
   return str;
-}
-
-function Reference(e) {
-	this.DisplayName = e.field("DisplayName");
-	this.Type = new ObjectType(e.field("Type"));
-	
-	this.Show = function() {
-		message("id:\n" + this.id + "\nDisplayName:" + this.DisplayName + "\nType:" + this.Type.Name);
-	}
 }
 
 function BaseObject(e) {
