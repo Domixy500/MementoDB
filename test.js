@@ -13,18 +13,20 @@ function objToString(object) {
     case "function":
       break;
     default:
-      
+			str += getName(object);
+    	break;
   }
-  for (var k in object) {
-    if (typeof object[k] == "object") {
-      str += k + '::' + objToString(object[k]) + '\n';
-    }
-    else if (typeof object[k] == "function") {}
-    else {
-      str += k + '::' + object[k] + '\n';
-    }
-  }
-  log(str);
+	log(str);
+  //for (var k in object) {
+    //if (typeof object[k] == "object") {
+     // str += k + '::' + objToString(object[k]) + '\n';
+   // }
+    //else if (typeof object[k] == "function") {}
+    //else {
+     // str += k + '::' + object[k] + '\n';
+    //}
+ // }
+  //log(str);
   return str;
 }
 
