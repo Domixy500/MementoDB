@@ -9,5 +9,5 @@ function Script_InitializeDB() {
   var Id = obj.entry.field("Id");
   message("id" + Id);
   message("str" + JSON.stringify(obj));
-  message("obj.Id" + obj.Id);
+  message("obj.Id" + obj.Id());
 }
