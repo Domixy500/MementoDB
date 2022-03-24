@@ -5,6 +5,20 @@ function Create(typeName) {
   return obj;
 }
 
+function objToString(object) {
+  var str = '';
+  for (var k in object) {
+    if (object.hasOwnProperty(k)) {
+      str += k + '::' + objToString(object[k]) + '\n';
+    }
+    else {
+      str += k + '::' + object[k] + '\n';
+    }
+  }
+  log(str);
+  return str;
+}
+
 function Reference(e) {
 	this.DisplayName = e.field("DisplayName");
 	this.Type = new ObjectType(e.field("Type"));
