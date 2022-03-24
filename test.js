@@ -19,16 +19,16 @@ function BaseObject(e) {
     this.entry = Create("BaseObject");
   }
 
-  this.Id = function() {
-    return this.entry.field("Id");
-  }
+  //this.Id = function() {
+    //return this.entry.field("Id");
+  //}
 }
-//BaseObject.prototype.Id = function() {
- // var result = this.entry.field("Id");
-//message("res" + result);
- // return result;
+BaseObject.prototype.Id = function() {
+  var result = this.entry.field("Id");
+message("res" + result);
+  return this.entry.field("Id");
   //return "test";
-//}
+}
 
 function ObjectType(e) {
   if(e == null) {
