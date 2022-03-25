@@ -1,5 +1,5 @@
 Object.prototype.displayString = function () {
-  return getName(this) + " (" + typeof this + "): " + this;
+  return getName(this) + " (" + typeof this + "): " + this + "\n";
 }
 function Create(typeName) {
   var library = libByName(typeName);
@@ -19,7 +19,7 @@ function objToString(obj) {
     case "function":
       break;
     default:
-      str += getName(obj);
+      str += obj.displayString;
     	break;
   }
 	log(str);
