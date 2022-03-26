@@ -40,7 +40,7 @@ function BaseObject(e) {
   if(e === undefined) {
     this.entry = Create("BaseObject");
   }
-
+  objToString(this);
   //this.Id = function() {
     //return this.entry.field("Id");
   //}
