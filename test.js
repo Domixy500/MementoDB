@@ -12,15 +12,16 @@ function objToString(obj) {
   var str = '';
   switch (typeof obj) {
     case "object":
+      str += obj.displayString();
       for (var prop in obj) {
-        objToString(prop);
+        objToString(obj[prop]);
       }
       break;
     case "function":
       break;
     default:
-      str += obj.displayString;
-    	break;
+      str += obj.displayString();
+      break;
   }
 	log(str);
   //for (var k in object) {
